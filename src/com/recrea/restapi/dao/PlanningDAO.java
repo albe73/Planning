@@ -68,8 +68,8 @@ public class PlanningDAO {
     	
     	
     	System.out.println("EntityManager " + em.isOpen()+ " " +em.toString()); 
-    	return (List<Planning>) em.createNativeQuery("SELECT * FROM planning").getResultList();
-        //return em.createNamedQuery("Planning.findAll", Planning.class).getResultList();
+    	//return (List<Planning>) em.createNativeQuery("SELECT * FROM planning").getResultList();
+        return em.createNamedQuery("Planning.findAll", Planning.class).getResultList();
         //return em.createQuery("SELECT * FROM plgatslink.planning", Planning.class).getResultList();
 		
     }
